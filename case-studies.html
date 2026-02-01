@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="sortNow & company case studies - Real results from our data and AI consulting engagements">
+    <title>Case Studies | sortNow & company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-line-1">sortNow</div>
+                <div class="logo-line-2">& Company<span class="highlight-dot">.</span></div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="how-we-work.html" class="nav-link">How We Work</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Case Studies</h1>
+                <p>Real-world results from our data and AI consulting engagements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section>
+        <div class="container">
+            <div class="grid grid-2">
+
+                <!-- Case Study 1 -->
+                <div class="glass-card glass-card-lg">
+                    <div class="mb-md">
+                        <span
+                            style="color: var(--color-purple); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">E-Commerce</span>
+                    </div>
+                    <h3 class="mb-md">Real-Time Recommendation Engine for $500M Retailer</h3>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">The Problem</h5>
+                        <p>A major online retailer had a batch-based recommendation system that updated only once per
+                            day. This meant customers saw stale recommendations that didn't reflect recent browsing
+                            behavior, leading to poor conversion rates and missed revenue opportunities.</p>
+                    </div>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">Our Solution</h5>
+                        <p>We built a real-time ML inference pipeline using Kafka, Redis, and custom-trained
+                            collaborative filtering models. The system processes 50,000 events per second and serves
+                            personalized recommendations with sub-50ms latency. We implemented A/B testing
+                            infrastructure to measure impact and continuously optimize models.</p>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-sm">Impact</h5>
+                        <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                            <li><strong style="color: var(--color-purple);">23% increase</strong> in click-through rate
+                                on recommendations</li>
+                            <li><strong style="color: var(--color-purple);">$12M annual revenue lift</strong> from
+                                improved conversion</li>
+                            <li><strong style="color: var(--color-purple);">15% reduction</strong> in infrastructure
+                                costs through optimization</li>
+                            <li><strong style="color: var(--color-purple);">3-month</strong> time to production from
+                                project kickoff</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="glass-card glass-card-lg">
+                    <div class="mb-md">
+                        <span
+                            style="color: var(--color-purple); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Financial
+                            Services</span>
+                    </div>
+                    <h3 class="mb-md">Fraud Detection System for Fintech Startup</h3>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">The Problem</h5>
+                        <p>A fast-growing fintech company was losing millions to fraud while also blocking legitimate
+                            transactions due to overly aggressive rules. Their legacy rule-based system couldn't adapt
+                            to evolving fraud patterns and had a 40% false positive rate.</p>
+                    </div>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">Our Solution</h5>
+                        <p>We designed and deployed a machine learning-based fraud detection system using gradient
+                            boosting models with real-time feature engineering. The system analyzes 200+ signals per
+                            transaction and provides risk scores in under 100ms. We implemented automated model
+                            retraining to adapt to new fraud patterns.</p>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-sm">Impact</h5>
+                        <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                            <li><strong style="color: var(--color-purple);">85% reduction</strong> in fraud losses (from
+                                $8M to $1.2M annually)</li>
+                            <li><strong style="color: var(--color-purple);">60% decrease</strong> in false positives,
+                                improving customer experience</li>
+                            <li><strong style="color: var(--color-purple);">99.97% uptime</strong> with automated
+                                failover and monitoring</li>
+                            <li><strong style="color: var(--color-purple);">ROI of 15x</strong> in the first year</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="glass-card glass-card-lg">
+                    <div class="mb-md">
+                        <span
+                            style="color: var(--color-purple); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Healthcare</span>
+                    </div>
+                    <h3 class="mb-md">Modern Data Warehouse for Healthcare Provider Network</h3>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">The Problem</h5>
+                        <p>A network of 50+ healthcare facilities had patient data scattered across incompatible
+                            systems. Generating reports for compliance or operational insights required weeks of manual
+                            data extraction and reconciliation. Data quality issues led to billing errors and compliance
+                            risks.</p>
+                    </div>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">Our Solution</h5>
+                        <p>We built a HIPAA-compliant data warehouse on Snowflake with automated ELT pipelines from all
+                            source systems. Implemented data quality frameworks, master data management, and
+                            self-service BI dashboards. Created a data governance framework with role-based access
+                            controls and audit logging.</p>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-sm">Impact</h5>
+                        <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                            <li><strong style="color: var(--color-purple);">From weeks to minutes</strong> for standard
+                                compliance reports</li>
+                            <li><strong style="color: var(--color-purple);">$3.2M recovered</strong> from previously
+                                unidentified billing errors</li>
+                            <li><strong style="color: var(--color-purple);">100% data quality</strong> for critical
+                                patient safety metrics</li>
+                            <li><strong style="color: var(--color-purple);">Zero HIPAA violations</strong> since
+                                implementation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="glass-card glass-card-lg">
+                    <div class="mb-md">
+                        <span
+                            style="color: var(--color-purple); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Manufacturing</span>
+                    </div>
+                    <h3 class="mb-md">Predictive Maintenance Platform for Industrial Equipment</h3>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">The Problem</h5>
+                        <p>A manufacturing company faced frequent unplanned equipment downtime costing $50K per hour.
+                            Their preventive maintenance schedule was based on fixed intervals, leading to both
+                            unnecessary maintenance and unexpected failures. They had sensor data but no way to act on
+                            it.</p>
+                    </div>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">Our Solution</h5>
+                        <p>We built an IoT data pipeline ingesting sensor data from 500+ machines and trained predictive
+                            models to forecast equipment failures 72 hours in advance. Created a monitoring dashboard
+                            for maintenance teams with automated alerts. Implemented edge computing for real-time
+                            anomaly detection.</p>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-sm">Impact</h5>
+                        <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                            <li><strong style="color: var(--color-purple);">70% reduction</strong> in unplanned downtime
+                            </li>
+                            <li><strong style="color: var(--color-purple);">$8M annual savings</strong> from avoided
+                                downtime and optimized maintenance</li>
+                            <li><strong style="color: var(--color-purple);">92% accuracy</strong> in predicting failures
+                                72 hours in advance</li>
+                            <li><strong style="color: var(--color-purple);">30% reduction</strong> in maintenance costs
+                                through optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case Study 5 -->
+                <div class="glass-card glass-card-lg">
+                    <div class="mb-md">
+                        <span
+                            style="color: var(--color-purple); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">SaaS</span>
+                    </div>
+                    <h3 class="mb-md">Cloud Migration & Cost Optimization for B2B SaaS</h3>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">The Problem</h5>
+                        <p>A rapidly growing SaaS company was spending $400K/month on AWS with unpredictable costs and
+                            frequent performance issues. Their infrastructure was over-provisioned in some areas and
+                            under-provisioned in others. Deployments were manual and error-prone, taking 4+ hours.</p>
+                    </div>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">Our Solution</h5>
+                        <p>We redesigned their cloud architecture with auto-scaling, containerization (EKS), and
+                            infrastructure-as-code (Terraform). Implemented comprehensive monitoring and cost allocation
+                            by customer. Built CI/CD pipelines for zero-downtime deployments. Optimized database queries
+                            and caching strategies.</p>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-sm">Impact</h5>
+                        <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                            <li><strong style="color: var(--color-purple);">52% reduction</strong> in monthly AWS costs
+                                (from $400K to $192K)</li>
+                            <li><strong style="color: var(--color-purple);">99.98% uptime</strong> vs. previous 99.5%
+                            </li>
+                            <li><strong style="color: var(--color-purple);">From 4 hours to 15 minutes</strong> for
+                                production deployments</li>
+                            <li><strong style="color: var(--color-purple);">10x faster</strong> API response times
+                                through optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Case Study 6 -->
+                <div class="glass-card glass-card-lg">
+                    <div class="mb-md">
+                        <span
+                            style="color: var(--color-purple); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Logistics</span>
+                    </div>
+                    <h3 class="mb-md">Route Optimization ML System for Delivery Network</h3>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">The Problem</h5>
+                        <p>A last-mile delivery company was using basic routing algorithms that didn't account for
+                            real-time traffic, driver preferences, or package priorities. This led to late deliveries,
+                            high fuel costs, and poor driver satisfaction. Manual route planning took 2 hours daily.</p>
+                    </div>
+
+                    <div class="mb-lg">
+                        <h5 class="mb-sm">Our Solution</h5>
+                        <p>We built a machine learning-powered route optimization system that considers 50+ variables
+                            including traffic patterns, weather, driver skills, and delivery time windows. The system
+                            generates optimal routes in under 30 seconds and provides real-time re-routing based on
+                            changing conditions.</p>
+                    </div>
+
+                    <div>
+                        <h5 class="mb-sm">Impact</h5>
+                        <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                            <li><strong style="color: var(--color-purple);">28% reduction</strong> in total miles driven
+                            </li>
+                            <li><strong style="color: var(--color-purple);">$2.4M annual savings</strong> in fuel and
+                                vehicle maintenance</li>
+                            <li><strong style="color: var(--color-purple);">95% on-time delivery</strong> rate (up from
+                                78%)</li>
+                            <li><strong style="color: var(--color-purple);">40% improvement</strong> in driver
+                                satisfaction scores</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container-narrow">
+            <div class="glass-card glass-card-lg text-center">
+                <h2 class="mb-md">Let's Create Your Success Story</h2>
+                <p class="mb-xl">Every case study started with a conversation. Let's discuss how we can deliver similar
+                    results for your organization.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Book a Strategy Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>sortNow & company</h4>
+                    <p>Premier AI, Data, and Cloud Engineering consulting firm.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Data Engineering</a></li>
+                        <li><a href="services.html">ML to Production</a></li>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">MLOps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-we-work.html">How We Work</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@sortnow.company">hello@sortnow.company</a></li>
+                        <li><a href="contact.html">Schedule a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> sortNow & company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

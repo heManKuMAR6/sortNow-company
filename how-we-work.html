@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Our proven 5-step consulting methodology - How sortNow & company delivers results">
+    <title>How We Work | sortNow & company</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-purple), var(--color-indigo));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            width: 2px;
+            height: calc(100% + 3rem);
+            background: linear-gradient(180deg, var(--color-purple), transparent);
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-content {
+            padding-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 60px 1fr;
+                gap: 1rem;
+            }
+
+            .timeline-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: 30px;
+                top: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-line-1">sortNow</div>
+                <div class="logo-line-2">& Company<span class="highlight-dot">.</span></div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="how-we-work.html" class="nav-link">How We Work</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>How We Work</h1>
+                <p>A proven methodology that delivers results through transparency, agility, and technical excellence
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Overview -->
+    <section>
+        <div class="container-narrow">
+            <div class="glass-card glass-card-lg text-center mb-2xl">
+                <h2 class="mb-md">Our 5-Step Methodology</h2>
+                <p>We've refined this approach across dozens of engagements with companies ranging from high-growth
+                    startups to Fortune 500 enterprises. Every step is designed to minimize risk, maximize transparency,
+                    and deliver measurable value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section>
+        <div class="container">
+            <div class="timeline">
+
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <div class="glass-card glass-card-lg">
+                            <h3 class="text-gradient mb-md">Understand the Problem</h3>
+                            <p class="mb-lg">We start by deeply understanding your business context, technical
+                                landscape, and desired outcomes. This isn't just a requirements gathering exercise—we
+                                dig into the "why" behind your needs.</p>
+
+                            <h5 class="mb-sm">What We Do:</h5>
+                            <ul
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Stakeholder interviews with business and technical leaders</li>
+                                <li>Current state assessment of data infrastructure and processes</li>
+                                <li>Identify pain points, bottlenecks, and opportunities</li>
+                                <li>Define clear, measurable success criteria</li>
+                                <li>Align on priorities and constraints (budget, timeline, resources)</li>
+                            </ul>
+
+                            <h5 class="mb-sm">Deliverables:</h5>
+                            <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Discovery document with findings and recommendations</li>
+                                <li>Prioritized problem statement</li>
+                                <li>High-level project scope and timeline</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <div class="glass-card glass-card-lg">
+                            <h3 class="text-gradient mb-md">Design Architecture</h3>
+                            <p class="mb-lg">We design a technical solution that balances best practices with pragmatic
+                                constraints. Our architectures are built for scale, maintainability, and
+                                cost-efficiency.</p>
+
+                            <h5 class="mb-sm">What We Do:</h5>
+                            <ul
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Create detailed technical architecture diagrams</li>
+                                <li>Select optimal technology stack based on your needs</li>
+                                <li>Design data models, API contracts, and system interfaces</li>
+                                <li>Plan for security, compliance, and disaster recovery</li>
+                                <li>Estimate costs and resource requirements</li>
+                                <li>Review and iterate with your team for buy-in</li>
+                            </ul>
+
+                            <h5 class="mb-sm">Deliverables:</h5>
+                            <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Architecture design document with diagrams</li>
+                                <li>Technology stack recommendations</li>
+                                <li>Implementation roadmap broken into sprints</li>
+                                <li>Risk assessment and mitigation strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <div class="glass-card glass-card-lg">
+                            <h3 class="text-gradient mb-md">Sprint-Based Implementation</h3>
+                            <p class="mb-lg">We build in 2-week sprints, delivering working software incrementally. This
+                                agile approach allows for rapid iteration and course correction based on feedback.</p>
+
+                            <h5 class="mb-sm">What We Do:</h5>
+                            <ul
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Sprint planning with clear goals and deliverables</li>
+                                <li>Daily standups to maintain alignment and momentum</li>
+                                <li>Write production-quality code with tests and documentation</li>
+                                <li>Implement CI/CD pipelines for automated testing and deployment</li>
+                                <li>Conduct code reviews and pair programming sessions</li>
+                                <li>Maintain sprint backlogs and track progress transparently</li>
+                            </ul>
+
+                            <h5 class="mb-sm">Deliverables:</h5>
+                            <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Working software deployed to staging/production each sprint</li>
+                                <li>Comprehensive documentation and runbooks</li>
+                                <li>Automated tests and monitoring dashboards</li>
+                                <li>Sprint retrospectives with lessons learned</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <div class="glass-card glass-card-lg">
+                            <h3 class="text-gradient mb-md">Weekly Demos & Reporting</h3>
+                            <p class="mb-lg">Transparency is non-negotiable. We provide weekly demos of working features
+                                and detailed progress reports so you always know exactly where things stand.</p>
+
+                            <h5 class="mb-sm">What We Do:</h5>
+                            <ul
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Live demos of completed features every week</li>
+                                <li>Detailed status reports covering progress, blockers, and next steps</li>
+                                <li>Metrics dashboards showing key performance indicators</li>
+                                <li>Open Q&A sessions to address concerns and gather feedback</li>
+                                <li>Adjust priorities based on evolving business needs</li>
+                            </ul>
+
+                            <h5 class="mb-sm">Deliverables:</h5>
+                            <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Weekly demo recordings and presentation slides</li>
+                                <li>Status reports with burndown charts and metrics</li>
+                                <li>Updated project timeline and risk register</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <div class="glass-card glass-card-lg">
+                            <h3 class="text-gradient mb-md">Handover or Long-Term Partnership</h3>
+                            <p class="mb-lg">We ensure a smooth transition whether you're taking over operations
+                                internally or continuing with us as a long-term partner.</p>
+
+                            <h5 class="mb-sm">What We Do:</h5>
+                            <ul
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Comprehensive knowledge transfer sessions with your team</li>
+                                <li>Detailed documentation covering architecture, operations, and troubleshooting</li>
+                                <li>Training on monitoring, maintenance, and common issues</li>
+                                <li>Post-launch support period to ensure stability</li>
+                                <li>Option to continue as ongoing technical partners (retainer model)</li>
+                            </ul>
+
+                            <h5 class="mb-sm">Deliverables:</h5>
+                            <ul style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 1.8;">
+                                <li>Complete technical documentation and runbooks</li>
+                                <li>Training materials and recorded sessions</li>
+                                <li>Monitoring and alerting setup</li>
+                                <li>Ongoing support plan (if applicable)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Principles -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-2xl">
+                <h2>Our Core Principles</h2>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="glass-card text-center">
+                    <h4 class="text-gradient mb-md">Transparency First</h4>
+                    <p>You'll never wonder what we're working on or how the project is progressing. Weekly demos and
+                        open communication are standard.</p>
+                </div>
+
+                <div class="glass-card text-center">
+                    <h4 class="text-gradient mb-md">Production Quality</h4>
+                    <p>We write code we'd be proud to maintain ourselves. Every line is tested, documented, and built to
+                        last.</p>
+                </div>
+
+                <div class="glass-card text-center">
+                    <h4 class="text-gradient mb-md">Knowledge Transfer</h4>
+                    <p>We don't create dependencies. Our goal is to empower your team with the knowledge and tools to
+                        succeed independently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container-narrow">
+            <div class="glass-card glass-card-lg text-center">
+                <h2 class="mb-md">Ready to Get Started?</h2>
+                <p class="mb-xl">Let's discuss your project and how our methodology can deliver results for your
+                    organization.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Book a Strategy Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>sortNow & company</h4>
+                    <p>Premier AI, Data, and Cloud Engineering consulting firm.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Data Engineering</a></li>
+                        <li><a href="services.html">ML to Production</a></li>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">MLOps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-we-work.html">How We Work</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@sortnow.company">hello@sortnow.company</a></li>
+                        <li><a href="contact.html">Schedule a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> sortNow & company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
