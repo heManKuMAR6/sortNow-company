@@ -13,24 +13,38 @@
    ============================================ */
 :root {
   /* Color Palette */
-  --color-navy: #0a0e27;
-  --color-black: #000000;
-  --color-deep-blue: #0f1729;
-  --color-purple: #8b5cf6;
-  --color-indigo: #6366f1;
-  --color-blue-glow: #4f46e5;
-  --color-cyan: #06b6d4;
+  --color-deep-teal: #1F6F8B;
+  /* Headers, buttons, icons */
+  --color-soft-mint: #8FDDE7;
+  /* Secondary background, accents */
+  --color-warm-coral: #FF6F61;
+  /* Highlights, CTAs */
+  --color-sunny-yellow: #FFD166;
+  /* Icons, playful cues */
 
-  /* Glass Effect Colors */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-bg-hover: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-border-glow: rgba(139, 92, 246, 0.3);
+  --color-off-white: #F9FAFB;
+  /* Background */
+  --color-soft-charcoal: #333333;
+  /* Text */
+  --color-light-gray: #E0E0E0;
+  /* Borders */
+
+  --color-primary: var(--color-deep-teal);
+  --color-secondary: var(--color-soft-mint);
+  --color-accent: var(--color-warm-coral);
+
+  /* Glass Effect Colors - Adapted for Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg-hover: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-border-glow: rgba(31, 111, 139, 0.3);
+  /* Deep Teal glow */
 
   /* Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.85);
-  --text-muted: rgba(255, 255, 255, 0.65);
+  --text-primary: var(--color-soft-charcoal);
+  --text-secondary: rgba(51, 51, 51, 0.8);
+  --text-muted: rgba(51, 51, 51, 0.6);
+  --text-inverse: #ffffff;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -41,7 +55,6 @@
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
 
-  /* Typography */
   /* Typography */
   --font-family-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -56,15 +69,15 @@
   --font-size-5xl: 4rem;
 
   /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --transition-base: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(31, 111, 139, 0.15);
 
   /* Border Radius */
   --radius-sm: 0.5rem;
@@ -85,12 +98,14 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  scroll-padding-top: 100px;
+  /* Offset for fixed navbar */
 }
 
 body {
   font-family: var(--font-family-body);
   color: var(--text-primary);
-  background: var(--color-black);
+  background: var(--color-off-white);
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
@@ -105,10 +120,13 @@ body::before {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 70%),
-    linear-gradient(135deg, var(--color-navy) 0%, var(--color-black) 50%, var(--color-deep-blue) 100%);
+    radial-gradient(circle at 20% 20%, rgba(143, 221, 231, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 111, 97, 0.1) 0%, transparent 50%),
+    /* Warm Coral */
+    radial-gradient(circle at 50% 50%, rgba(31, 111, 139, 0.05) 0%, transparent 70%),
+    /* Deep Teal */
+    radial-gradient(circle at 90% 10%, rgba(255, 209, 102, 0.2) 0%, transparent 40%);
+  /* Sunny Yellow accent */
   z-index: -1;
   animation: gradientShift 15s ease infinite;
 }
@@ -138,7 +156,7 @@ h6 {
   font-weight: 300;
   /* Even thinner for that ultra-premium look */
   line-height: 1.25;
-  color: var(--text-primary);
+  color: var(--color-deep-teal);
   margin-bottom: var(--spacing-md);
   letter-spacing: -0.015em;
 }
@@ -201,7 +219,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-purple);
+  color: var(--color-deep-teal);
 }
 
 /* ============================================
@@ -268,9 +286,28 @@ a:hover {
   padding: 0 var(--spacing-lg);
 }
 
+/* Specific fix for Trust section overlap */
+#trust {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  background: var(--color-off-white);
+  /* Ensure it's opaque */
+  z-index: 10;
+  /* Ensure it sits on top if hero content spills */
+}
+
 section {
   padding: var(--spacing-3xl) 0;
   position: relative;
+  z-index: 1;
+  /* Ensure stacking context */
+  scroll-margin-top: 100px;
+  /* Ensure anchor links don't land under header */
+}
+
+/* Ensure Hero is distinct */
+.hero {
+  z-index: 5;
 }
 
 /* ============================================
@@ -282,7 +319,7 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 14, 39, 0.8);
+  background: rgba(249, 250, 251, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--glass-border);
@@ -290,7 +327,7 @@ section {
 }
 
 .navbar.scrolled {
-  background: rgba(10, 14, 39, 0.95);
+  background: rgba(249, 250, 251, 0.95);
   box-shadow: var(--shadow-md);
 }
 
@@ -335,7 +372,7 @@ section {
 }
 
 .logo:hover .logo-line-2 {
-  color: var(--color-purple);
+  color: var(--color-deep-teal);
 }
 
 .logo .highlight-dot {
@@ -369,18 +406,20 @@ section {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-purple), var(--color-indigo));
+  background: linear-gradient(90deg, var(--color-deep-teal), var(--color-soft-mint));
   transition: width var(--transition-base);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--text-primary);
+  color: var(--color-deep-teal);
+  font-weight: 500;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+  background: var(--color-deep-teal);
 }
 
 .mobile-menu-toggle {
@@ -426,11 +465,11 @@ section {
 }
 
 .btn-primary {
-  background: rgba(139, 92, 246, 0.1);
-  /* Very subtle purple tint */
-  border-color: rgba(139, 92, 246, 0.3);
-  color: var(--text-primary);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+  background: var(--color-deep-teal);
+  border-color: var(--color-deep-teal);
+  color: #ffffff;
+  /* Always white text on primary button */
+  box-shadow: 0 4px 15px rgba(31, 111, 139, 0.3);
 }
 
 .btn-primary::before {
@@ -440,17 +479,16 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(99, 102, 241, 0.4));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: -1;
+  z-index: 1;
 }
 
 .btn-primary:hover {
-  border-color: rgba(139, 92, 246, 0.6);
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  border-color: var(--color-deep-teal);
+  box-shadow: 0 6px 20px rgba(31, 111, 139, 0.4);
   transform: translateY(-2px);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .btn-primary:hover::before {
@@ -570,7 +608,7 @@ section {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--color-purple);
+  color: var(--color-warm-coral);
   font-weight: bold;
 }
 
@@ -579,13 +617,19 @@ section {
    ============================================ */
 .hero {
   min-height: 100vh;
+  /* Revert to 100vh but ensure padding handles it */
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  /* Massive padding to ensure button clears */
+  margin-bottom: 5rem;
+  /* Extra safety margin to push next section down */
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-content {
@@ -593,34 +637,46 @@ section {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  /* Ensure vertical gaps */
 }
 
 /* Intro Text "Are you SORTed?" */
 .intro-reveal {
   margin-bottom: var(--spacing-sm);
-  overflow: hidden;
-  height: 2em;
+  /* Removed overflow: hidden to prevent clipping descenders */
+  min-height: 3.5rem;
+  /* Increased height */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: visible;
+  /* Ensure y is not cut off */
 }
 
 .intro-text {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-lg);
+  font-size: 2.25rem;
+  /* Increased significantly from lg */
   font-weight: 500;
-  color: var(--color-purple);
+  color: var(--color-deep-teal);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: normal;
+  /* Removed wide spacing */
   display: inline-block;
   opacity: 0;
   animation: revealText 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  transform: translateY(100%);
+  /* Removed initial transform translateY(100%) to avoid complexity if overflow is visible, handled in keyframes */
+  transform: translateY(20px);
 }
 
 .brand-highlight {
   font-weight: 800;
-  background: linear-gradient(120deg, var(--color-purple), var(--color-cyan));
+  background: linear-gradient(120deg, var(--color-deep-teal), var(--color-soft-mint));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -643,7 +699,7 @@ section {
 }
 
 .highlight-dot {
-  color: var(--color-cyan);
+  color: var(--color-warm-coral);
   display: inline-block;
   animation: pulseDot 2s infinite 2.5s;
 }
@@ -680,13 +736,18 @@ section {
 .hero-cta {
   opacity: 0;
   animation: slideUpFade 1s ease 1.8s forwards;
+  margin-bottom: var(--spacing-xl);
+  /* Add buffer */
+  position: relative;
+  /* Ensure it takes space */
+  z-index: 10;
 }
 
 
 /* Animations */
 @keyframes revealText {
   0% {
-    transform: translateY(100%);
+    transform: translateY(20px);
     opacity: 0;
   }
 
@@ -715,8 +776,8 @@ section {
   }
 
   .intro-text {
-    font-size: var(--font-size-md);
-    letter-spacing: 0.15em;
+    font-size: 1.5rem;
+    /* Smaller on mobile but still clear */
   }
 }
 
@@ -772,8 +833,8 @@ section {
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--color-purple);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  border-color: var(--color-deep-teal);
+  box-shadow: 0 0 0 3px rgba(31, 111, 139, 0.1);
   background: var(--glass-bg-hover);
 }
 
@@ -791,7 +852,7 @@ section {
    Footer
    ============================================ */
 .footer {
-  background: rgba(10, 14, 39, 0.6);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
   border-top: 1px solid var(--glass-border);
   padding: var(--spacing-2xl) 0 var(--spacing-lg);
@@ -824,7 +885,7 @@ section {
 }
 
 .footer-links a:hover {
-  color: var(--color-purple);
+  color: var(--color-deep-teal);
 }
 
 .footer-bottom {
@@ -843,7 +904,7 @@ section {
 }
 
 .text-gradient {
-  color: var(--color-purple);
+  color: var(--color-deep-teal);
 }
 
 .mb-sm {
