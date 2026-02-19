@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact sortNow & company - Book a strategy call to discuss your data and AI needs">
+    <title>Contact | sortNow & company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-line-1">sortNow</div>
+                <div class="logo-line-2">& Company<span class="highlight-dot">.</span></div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#trust" class="nav-link">About</a></li>
+                <li><a href="index.html#problem" class="nav-link">How We Work</a></li>
+                <li><a href="index.html#solution" class="nav-link">Services</a></li>
+                <li><a href="index.html#story" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Let's Talk</h1>
+                <p>Start the conversation about transforming your data and AI capabilities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section>
+        <div class="container">
+            <div class="grid grid-2" style="align-items: start;">
+
+                <!-- Contact Information -->
+                <div>
+                    <div class="glass-card glass-card-lg mb-xl">
+                        <h2 class="mb-md">Book a Strategy Call</h2>
+                        <p class="mb-lg">Every engagement starts with a conversation. We'll discuss your challenges,
+                            explore potential solutions, and determine if we're the right fit for your needs.</p>
+
+                        <h4 class="mb-md">What to Expect:</h4>
+                        <ul
+                            style="color: var(--text-secondary); padding-left: 1.5rem; line-height: 2; margin-bottom: 1.5rem;">
+                            <li>30-minute introductory call with one of our partners</li>
+                            <li>Discussion of your current challenges and goals</li>
+                            <li>High-level assessment of potential solutions</li>
+                            <li>No sales pressure—just honest technical conversation</li>
+                            <li>Clear next steps if we decide to move forward</li>
+                        </ul>
+
+                        <h4 class="mb-md">Contact Information:</h4>
+                        <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:hello@sortnow.company"
+                                style="color: var(--color-purple);">hello@sortnow.company</a></p>
+                        <p style="margin-bottom: 1.5rem;"><strong>Response Time:</strong> Within 24 hours</p>
+
+                        <div class="glass-card glass-card-sm"
+                            style="background: rgba(139, 92, 246, 0.1); border-color: var(--color-purple);">
+                            <p style="margin: 0; font-size: 0.95rem;"><strong>Note:</strong> We work with a limited
+                                number of clients to ensure quality and attention. If we're not the right fit, we'll
+                                happily refer you to trusted partners in our network.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card text-center">
+                        <h4 class="mb-md">Prefer Email?</h4>
+                        <p class="mb-md">Send us a message at <a href="mailto:hello@sortnow.company"
+                                style="color: var(--color-purple); font-weight: 600;">hello@sortnow.company</a></p>
+                        <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">We typically respond within
+                            one business day</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <div class="glass-card glass-card-lg">
+                        <h3 class="mb-lg">Send Us a Message</h3>
+
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="John Smith"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="john@company.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" name="company" class="form-input"
+                                    placeholder="Acme Inc.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="role" class="form-label">Your Role</label>
+                                <input type="text" id="role" name="role" class="form-input"
+                                    placeholder="CTO, VP Engineering, etc.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest" class="form-label">What are you interested in?</label>
+                                <select id="interest" name="interest" class="form-input" style="cursor: pointer;">
+                                    <option value="">Select a service...</option>
+                                    <option value="data-engineering">Data Engineering & Warehousing</option>
+                                    <option value="ml-production">ML Models to Production</option>
+                                    <option value="mlops">MLOps & CI/CD for ML</option>
+                                    <option value="cloud-architecture">Cloud Architecture & Migration</option>
+                                    <option value="technical-partnership">AI/Data Technical Partnership</option>
+                                    <option value="resource-augmentation">Resource Augmentation</option>
+                                    <option value="not-sure">Not sure yet / Multiple areas</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Tell us about your needs *</label>
+                                <textarea id="message" name="message" class="form-textarea"
+                                    placeholder="Describe your current challenges, goals, or what you're looking to build..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="timeline" class="form-label">Desired Timeline</label>
+                                <select id="timeline" name="timeline" class="form-input" style="cursor: pointer;">
+                                    <option value="">Select timeline...</option>
+                                    <option value="urgent">Urgent (within 2 weeks)</option>
+                                    <option value="soon">Soon (1-2 months)</option>
+                                    <option value="planning">Planning (2-6 months)</option>
+                                    <option value="exploring">Just exploring</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+                            <p
+                                style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted); text-align: center;">
+                                We respect your privacy. Your information will never be shared with third parties.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container-narrow">
+            <div class="text-center mb-2xl">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="glass-card glass-card-lg mb-lg">
+                <h4 class="mb-md">What size companies do you work with?</h4>
+                <p style="margin: 0;">We work with companies ranging from Series A startups to Fortune 500 enterprises.
+                    What matters most is the complexity and impact of the problem, not company size. If you have
+                    ambitious data or AI goals and need senior technical expertise, we can likely help.</p>
+            </div>
+
+            <div class="glass-card glass-card-lg mb-lg">
+                <h4 class="mb-md">What's your typical engagement model?</h4>
+                <p style="margin: 0;">We offer both project-based engagements (typically 3-6 months) and ongoing
+                    retainer partnerships. Project engagements are scoped with clear deliverables and timelines.
+                    Retainer partnerships provide dedicated monthly capacity for continuous innovation and support.</p>
+            </div>
+
+            <div class="glass-card glass-card-lg mb-lg">
+                <h4 class="mb-md">Do you work remotely or on-site?</h4>
+                <p style="margin: 0;">We're set up for fully remote collaboration with clients worldwide. For critical
+                    kickoffs or workshops, we can travel on-site. Our remote-first approach has proven highly effective
+                    with weekly demos, daily standups, and continuous communication.</p>
+            </div>
+
+            <div class="glass-card glass-card-lg mb-lg">
+                <h4 class="mb-md">How quickly can you start?</h4>
+                <p style="margin: 0;">For most engagements, we can start within 2-3 weeks of signing. This includes time
+                    for onboarding, access setup, and initial discovery. For urgent needs, we've started projects in as
+                    little as one week.</p>
+            </div>
+
+            <div class="glass-card glass-card-lg">
+                <h4 class="mb-md">What if we're not sure exactly what we need?</h4>
+                <p style="margin: 0;">That's perfectly fine and actually quite common. Many of our best engagements
+                    started with "we know we need to do something with our data, but we're not sure what." We can start
+                    with a discovery phase to assess your needs and recommend the right approach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section>
+        <div class="container-narrow">
+            <div class="glass-card glass-card-lg text-center">
+                <h2 class="mb-md">Ready to Get Started?</h2>
+                <p class="mb-xl">Fill out the form above or email us directly at <a href="mailto:hello@sortnow.company"
+                        style="color: var(--color-purple); font-weight: 600;">hello@sortnow.company</a></p>
+                <p style="margin: 0; color: var(--text-muted);">We look forward to hearing from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>sortNow & company</h4>
+                    <p>Premier AI, Data, and Cloud Engineering consulting firm.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#solution">Data Engineering</a></li>
+                        <li><a href="index.html#solution">ML to Production</a></li>
+                        <li><a href="index.html#solution">Cloud Architecture</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#problem">How We Work</a></li>
+                        <li><a href="index.html#trust">Why SortNow</a></li>
+                        <li><a href="index.html#story">Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@sortnow.company">hello@sortnow.company</a></li>
+                        <li><a href="contact.html">Schedule a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> sortNow & company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Meet the sortNow & company team - Expert partners in AI, Data, and Cloud Engineering">
+    <title>Team | sortNow & company</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team-card {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--glass-border-glow);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--color-purple);
+            font-size: var(--font-size-md);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .team-bio {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .team-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-line-1">sortNow</div>
+                <div class="logo-line-2">& Company<span class="highlight-dot">.</span></div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="how-we-work.html" class="nav-link">How We Work</a></li>
+                <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Team</h1>
+                <p>World-class engineers who have built and scaled systems at leading technology companies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Introduction -->
+    <section>
+        <div class="container-narrow">
+            <div class="glass-card glass-card-lg text-center mb-2xl">
+                <h2 class="mb-md">Partners Who Build</h2>
+                <p>Our founding partners aren't just consultants—they're hands-on engineers with deep expertise in data
+                    infrastructure, machine learning, and cloud architecture. We've architected systems processing
+                    billions of events, built ML platforms serving millions of predictions, and led engineering teams at
+                    high-growth companies. When you work with sortNow & company, you work directly with senior technical
+                    leaders who write code, design systems, and solve hard problems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members -->
+    <section>
+        <div class="container">
+            <div class="grid grid-3">
+
+                <!-- Hemanth Kumar Peddameti -->
+                <div class="glass-card glass-card-lg team-card">
+                    <img src="assets/team/hemanth.png" alt="Hemanth Kumar Peddameti" class="team-photo">
+                    <h3 class="team-name">Hemanth Kumar Peddameti</h3>
+                    <div class="team-role">Founding Partner</div>
+                    <div class="team-bio">
+                        <p>Hemanth is a data infrastructure specialist with 10+ years building scalable data platforms.
+                            He previously led data engineering at a unicorn fintech startup, where he architected a
+                            real-time data warehouse processing 5 billion events daily.</p>
+                        <p>His expertise spans modern data stacks (Snowflake, Databricks, dbt), streaming architectures
+                            (Kafka, Flink), and cloud infrastructure (AWS, GCP). Hemanth has a track record of reducing
+                            data processing costs by 50%+ while improving reliability and performance.</p>
+                        <p>He holds a Master's in Computer Science and is passionate about building data systems that
+                            enable data-driven decision making at scale.</p>
+                    </div>
+                </div>
+
+                <!-- Nikhil Yadav Kundella -->
+                <div class="glass-card glass-card-lg team-card">
+                    <img src="assets/team/nikhil.png" alt="Nikhil Yadav Kundella" class="team-photo">
+                    <h3 class="team-name">Nikhil Yadav Kundella</h3>
+                    <div class="team-role">Founding Partner</div>
+                    <div class="team-bio">
+                        <p>Nikhil specializes in taking machine learning from research to production. He previously
+                            served as ML Engineering Lead at a major e-commerce platform, where he built recommendation
+                            systems serving 50M+ users with sub-50ms latency.</p>
+                        <p>His expertise includes MLOps, model deployment, feature engineering, and building ML
+                            platforms. Nikhil has deployed production ML systems across recommendation engines, fraud
+                            detection, demand forecasting, and computer vision applications.</p>
+                        <p>He's particularly skilled at bridging the gap between data scientists and production systems,
+                            ensuring models deliver business value. Nikhil holds a Master's in Machine Learning and has
+                            published research in top-tier conferences.</p>
+                    </div>
+                </div>
+
+                <!-- Akhilesh Tekuru -->
+                <div class="glass-card glass-card-lg team-card">
+                    <img src="assets/team/akhilesh.png" alt="Akhilesh Tekuru" class="team-photo">
+                    <h3 class="team-name">Akhilesh Tekuru</h3>
+                    <div class="team-role">Founding Partner</div>
+                    <div class="team-bio">
+                        <p>Akhilesh is a cloud architecture expert who has designed and migrated mission-critical
+                            systems to the cloud for Fortune 500 companies. He previously led cloud infrastructure at a
+                            SaaS unicorn, managing systems serving 100M+ API requests daily.</p>
+                        <p>His expertise spans cloud-native architectures, Kubernetes, infrastructure-as-code, cost
+                            optimization, and DevOps practices. Akhilesh has a proven track record of reducing cloud
+                            costs by 40-60% while improving reliability and performance.</p>
+                        <p>He's passionate about building resilient, scalable systems that grow with businesses.
+                            Akhilesh is a certified AWS Solutions Architect and holds a Master's in Distributed Systems.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-2xl">
+                <h2>Why Work With Us</h2>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="glass-card text-center">
+                    <h4 class="text-gradient mb-md">Hands-On Leadership</h4>
+                    <p>Our partners don't just advise—they architect, code, and deploy. You get senior engineering
+                        talent working directly on your most critical challenges.</p>
+                </div>
+
+                <div class="glass-card text-center">
+                    <h4 class="text-gradient mb-md">Battle-Tested Experience</h4>
+                    <p>We've built systems at scale for companies you know. We bring Silicon Valley engineering
+                        practices to every engagement, regardless of company size.</p>
+                </div>
+
+                <div class="glass-card text-center">
+                    <h4 class="text-gradient mb-md">Knowledge Transfer</h4>
+                    <p>We don't create dependencies. Our goal is to build your team's capabilities while delivering
+                        solutions. You'll learn our best practices through collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container-narrow">
+            <div class="glass-card glass-card-lg text-center">
+                <h2 class="mb-md">Work With Our Team</h2>
+                <p class="mb-xl">Let's discuss how our expertise can help you build world-class data and AI
+                    capabilities.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Book a Strategy Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>sortNow & company</h4>
+                    <p>Premier AI, Data, and Cloud Engineering consulting firm.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Data Engineering</a></li>
+                        <li><a href="services.html">ML to Production</a></li>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">MLOps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-we-work.html">How We Work</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@sortnow.company">hello@sortnow.company</a></li>
+                        <li><a href="contact.html">Schedule a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> sortNow & company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
