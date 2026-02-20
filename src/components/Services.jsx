@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 /**
  * Refined "Services" section (Services.jsx)
@@ -171,9 +172,9 @@ const Services = () => {
                     <p style={{ color: 'white', opacity: 0.9, maxWidth: '600px', fontWeight: 300, marginBottom: 'var(--spacing-xl)' }}>
                         No fluff, no black boxes. Just senior engineering that helps you grow instead of slowing you down.
                     </p>
-                    <a href="/contact" className="btn btn-primary" style={{ background: 'white', color: 'var(--color-deep-teal)' }}>
+                    <Link to="/contact" className="btn btn-primary" style={{ background: 'white', color: 'var(--color-deep-teal)' }}>
                         Start a Conversation →
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
         </section>

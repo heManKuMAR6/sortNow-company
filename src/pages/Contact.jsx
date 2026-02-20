@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -10,6 +11,7 @@ const fadeIn = {
 };
 
 const Contact = () => {
+    const [submitted, setSubmitted] = useState(false);
     return (
         <div className="contact-page">
             <Navbar />
@@ -81,62 +83,93 @@ const Contact = () => {
                         {/* Contact Form */}
                         <motion.div {...fadeIn} transition={{ ...fadeIn.transition, delay: 0.2 }}>
                             <div className="glass-card glass-card-lg">
-                                <h3 className="mb-lg">Send Us a Message</h3>
+                                <AnimatePresence mode="wait">
+                                    {!submitted ? (
+                                        <motion.div
+                                            key="form"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0, scale: 0.95 }}
+                                        >
+                                            <h3 className="mb-lg">Send Us a Message</h3>
+                                            <form id="contact-form" onSubmit={(e) => {
+                                                e.preventDefault();
+                                                setSubmitted(true);
+                                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                            }}>
+                                                <FormField label="Full Name" id="name" type="text" placeholder="John Smith" required />
+                                                <FormField label="Email Address" id="email" type="email" placeholder="john@company.com" required />
+                                                <FormField label="Company" id="company" type="text" placeholder="Acme Inc." />
+                                                <FormField label="Your Role" id="role" type="text" placeholder="CTO, VP Engineering, etc." />
 
-                                <form id="contact-form" onSubmit={(e) => {
-                                    e.preventDefault();
-                                    alert('Thank you! We will get back to you soon.');
-                                }}>
-                                    <FormField label="Full Name" id="name" type="text" placeholder="John Smith" required />
-                                    <FormField label="Email Address" id="email" type="email" placeholder="john@company.com" required />
-                                    <FormField label="Company" id="company" type="text" placeholder="Acme Inc." />
-                                    <FormField label="Your Role" id="role" type="text" placeholder="CTO, VP Engineering, etc." />
+                                                <div style={{ marginBottom: '1.5rem' }}>
+                                                    <label htmlFor="interest" className="form-label">What are you interested in?</label>
+                                                    <select id="interest" name="interest" className="form-select">
+                                                        <option value="">Select a service...</option>
+                                                        <option value="data-engineering">Data Engineering & Warehousing</option>
+                                                        <option value="ml-production">ML Models to Production</option>
+                                                        <option value="mlops">MLOps & CI/CD for ML</option>
+                                                        <option value="cloud-architecture">Cloud Architecture & Migration</option>
+                                                        <option value="technical-partnership">AI/Data Technical Partnership</option>
+                                                        <option value="resource-augmentation">Resource Augmentation</option>
+                                                        <option value="not-sure">Not sure yet / Multiple areas</option>
+                                                    </select>
+                                                </div>
 
-                                    <div style={{ marginBottom: '1.5rem' }}>
-                                        <label htmlFor="interest" className="form-label">What are you interested in?</label>
-                                        <select id="interest" name="interest" className="form-select">
-                                            <option value="">Select a service...</option>
-                                            <option value="data-engineering">Data Engineering & Warehousing</option>
-                                            <option value="ml-production">ML Models to Production</option>
-                                            <option value="mlops">MLOps & CI/CD for ML</option>
-                                            <option value="cloud-architecture">Cloud Architecture & Migration</option>
-                                            <option value="technical-partnership">AI/Data Technical Partnership</option>
-                                            <option value="resource-augmentation">Resource Augmentation</option>
-                                            <option value="not-sure">Not sure yet / Multiple areas</option>
-                                        </select>
-                                    </div>
+                                                <div style={{ marginBottom: '1.5rem' }}>
+                                                    <label htmlFor="message" className="form-label">Tell us about your needs *</label>
+                                                    <textarea id="message" name="message" className="form-input" style={{ minHeight: '150px', resize: 'vertical' }}
+                                                        placeholder="Describe your current challenges, goals, or what you're looking to build..." required></textarea>
+                                                </div>
 
-                                    <div style={{ marginBottom: '1.5rem' }}>
-                                        <label htmlFor="message" className="form-label">Tell us about your needs *</label>
-                                        <textarea id="message" name="message" className="form-input" style={{ minHeight: '150px', resize: 'vertical' }}
-                                            placeholder="Describe your current challenges, goals, or what you're looking to build..." required></textarea>
-                                    </div>
+                                                <div style={{ marginBottom: '1.5rem' }}>
+                                                    <label htmlFor="timeline" className="form-label">Desired Timeline</label>
+                                                    <select id="timeline" name="timeline" className="form-select">
+                                                        <option value="">Select timeline...</option>
+                                                        <option value="urgent">Urgent (within 2 weeks)</option>
+                                                        <option value="soon">Soon (1-2 months)</option>
+                                                        <option value="planning">Planning (2-6 months)</option>
+                                                        <option value="exploring">Just exploring</option>
+                                                    </select>
+                                                </div>
 
-                                    <div style={{ marginBottom: '1.5rem' }}>
-                                        <label htmlFor="timeline" className="form-label">Desired Timeline</label>
-                                        <select id="timeline" name="timeline" className="form-select">
-                                            <option value="">Select timeline...</option>
-                                            <option value="urgent">Urgent (within 2 weeks)</option>
-                                            <option value="soon">Soon (1-2 months)</option>
-                                            <option value="planning">Planning (2-6 months)</option>
-                                            <option value="exploring">Just exploring</option>
-                                        </select>
-                                    </div>
+                                                <motion.button
+                                                    type="submit"
+                                                    className="btn btn-primary"
+                                                    style={{ width: '100%' }}
+                                                    whileHover={{ scale: 1.02 }}
+                                                    whileTap={{ scale: 0.98 }}
+                                                >
+                                                    Send Message
+                                                </motion.button>
 
-                                    <motion.button
-                                        type="submit"
-                                        className="btn btn-primary"
-                                        style={{ width: '100%' }}
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                    >
-                                        Send Message
-                                    </motion.button>
-
-                                    <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-                                        We respect your privacy. Your information will never be shared with third parties.
-                                    </p>
-                                </form>
+                                                <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+                                                    We respect your privacy. Your information will never be shared with third parties.
+                                                </p>
+                                            </form>
+                                        </motion.div>
+                                    ) : (
+                                        <motion.div
+                                            key="success"
+                                            initial={{ opacity: 0, scale: 0.9 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+                                            style={{ textAlign: 'center', padding: 'var(--spacing-2xl) 0' }}
+                                        >
+                                            <div style={{ fontSize: '4rem', marginBottom: 'var(--spacing-xl)' }}>✨</div>
+                                            <h3 className="mb-md">Message Sent!</h3>
+                                            <p className="mb-xl" style={{ color: 'var(--text-secondary)' }}>
+                                                Thank you for reaching out. One of our partners will review your message and get back to you personally within 24 hours.
+                                            </p>
+                                            <button
+                                                className="btn btn-outline"
+                                                onClick={() => setSubmitted(false)}
+                                            >
+                                                Send Another Message
+                                            </button>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         </motion.div>
                     </div>

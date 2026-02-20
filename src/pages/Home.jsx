@@ -18,6 +18,7 @@ const Home = () => {
             <Services />
             <WhySortNow />
             <Story />
+            <CTA />
             <Footer />
         </div>
     );

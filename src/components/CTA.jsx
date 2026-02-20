@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 /**
  * Refined "CTA" section (CTA.jsx)
@@ -6,6 +7,7 @@ import { motion } from 'framer-motion';
  */
 
 const CTA = () => {
+    const MotionLink = motion(Link);
     return (
         <section style={{ padding: 'var(--spacing-5xl) 0', background: 'white', position: 'relative', overflow: 'hidden' }}>
 
@@ -70,15 +72,15 @@ const CTA = () => {
                     </p>
 
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <motion.a
-                            href="/contact"
+                        <MotionLink
+                            to="/contact"
                             className="btn btn-primary btn-lg"
                             style={{ background: 'white', color: 'var(--color-deep-teal)', minWidth: '220px' }}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             Sort My Systems →
-                        </motion.a>
+                        </MotionLink>
                         <motion.a
                             href="#solution"
                             className="btn btn-outline btn-lg"

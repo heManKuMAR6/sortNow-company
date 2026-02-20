@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -52,6 +52,8 @@ const Navbar = () => {
 
     const isHome = location.pathname === '/';
 
+    const MotionLink = motion(Link);
+
     return (
         <motion.nav
             className={`navbar ${scrolled ? 'scrolled' : ''}`}
@@ -60,17 +62,18 @@ const Navbar = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
             <div className="nav-container">
-                <a href={isHome ? '#' : '/'} className="logo" onClick={(e) => {
+                <Link to={isHome ? '/' : '/'} className="logo" onClick={(e) => {
                     if (isHome) {
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
+                        window.history.pushState(null, '', '/');
                     }
                 }}>
                     <div className="logo-line-1">sortNow</div>
-                    <div className="logo-line-2">
+                    <div className="logo-line-2" contentEditable={false}>
                         & Company<span className="highlight-dot">.</span>
                     </div>
-                </a>
+                </Link>
 
                 <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2xl)' }}>
                     <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
@@ -80,15 +83,15 @@ const Navbar = () => {
                         <li><a href={isHome ? "#story" : "/#story"} className={`nav-link ${activeSection === 'story' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'story')}>Team</a></li>
                     </ul>
 
-                    <motion.a
-                        href="/contact"
+                    <MotionLink
+                        to="/contact"
                         className="btn btn-primary"
                         style={{ padding: '0.6rem 1.4rem', fontSize: '0.85rem' }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
                         Let's Talk →
-                    </motion.a>
+                    </MotionLink>
                 </div>
 
                 <button

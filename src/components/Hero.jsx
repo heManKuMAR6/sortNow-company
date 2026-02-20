@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import HeroAnimation from './HeroAnimation';
 
 const Hero = () => {
@@ -54,7 +55,7 @@ const Hero = () => {
                             transition={{ duration: 1, delay: 1.1 }}
                         >
                             <a href="#solution" className="btn btn-primary btn-lg">View Our Work</a>
-                            <a href="/contact" className="btn btn-secondary btn-lg">Start a Conversation →</a>
+                            <Link to="/contact" className="btn btn-secondary btn-lg">Start a Conversation →</Link>
                         </motion.div>
                     </motion.div>
                 </div>
