@@ -63,7 +63,7 @@ const Contact = () => {
                                 </ul>
 
                                 <h4 className="mb-md" style={{ fontSize: 'var(--font-size-lg)' }}>Contact Information:</h4>
-                                <p style={{ marginBottom: '0.5rem' }}><strong>Email:</strong> <a href="mailto:hello@sortnow.company" style={{ color: 'var(--color-deep-teal)' }}>hello@sortnow.company</a></p>
+                                <p style={{ marginBottom: '0.5rem' }}><strong>Email:</strong> <a href="mailto:hello@sortnow.co" style={{ color: 'var(--color-deep-teal)' }}>hello@sortnow.co</a></p>
                                 <p style={{ marginBottom: '1.5rem' }}><strong>Response Time:</strong> Within 24 hours</p>
 
                                 <div className="glass-card glass-card-sm" style={{ background: 'rgba(31, 111, 139, 0.05)', borderColor: 'rgba(31, 111, 139, 0.15)' }}>
@@ -75,7 +75,7 @@ const Contact = () => {
 
                             <div className="glass-card text-center">
                                 <h4 className="mb-md">Prefer Email?</h4>
-                                <p className="mb-md">Send us a message at <a href="mailto:hello@sortnow.company" style={{ color: 'var(--color-deep-teal)', fontWeight: '600' }}>hello@sortnow.company</a></p>
+                                <p className="mb-md">Send us a message at <a href="mailto:hello@sortnow.co" style={{ color: 'var(--color-deep-teal)', fontWeight: '600' }}>hello@sortnow.co</a></p>
                                 <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '0.9rem' }}>We typically respond within one business day</p>
                             </div>
                         </motion.div>
@@ -216,7 +216,7 @@ const Contact = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="mb-md">Ready to Get Started?</h2>
-                        <p className="mb-xl">Fill out the form above or email us directly at <a href="mailto:hello@sortnow.company" style={{ color: 'var(--color-deep-teal)', fontWeight: '600' }}>hello@sortnow.company</a></p>
+                        <p className="mb-xl">Fill out the form above or email us directly at <a href="mailto:hello@sortnow.co" style={{ color: 'var(--color-deep-teal)', fontWeight: '600' }}>hello@sortnow.co</a></p>
                         <p style={{ margin: 0, color: 'var(--text-muted)' }}>We look forward to hearing from you.</p>
                     </motion.div>
                 </div>
