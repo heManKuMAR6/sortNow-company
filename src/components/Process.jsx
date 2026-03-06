@@ -83,7 +83,7 @@ const stages = [
 
 const Process = () => {
     return (
-        <section id="problem" style={{ padding: 'var(--spacing-5xl) 0', background: 'var(--color-off-white)' }}>
+        <section id="problem" style={{ padding: 'calc(var(--spacing-5xl) * 1.5) 0 var(--spacing-5xl) 0', background: 'var(--color-off-white)' }}>
             <div className="container">
                 <div className="text-center mb-5xl">
                     <motion.div
@@ -92,7 +92,15 @@ const Process = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="badge" style={{ background: 'rgba(31, 111, 139, 0.08)', color: 'var(--color-deep-teal)', borderColor: 'rgba(31, 111, 139, 0.15)' }}>
+                        <span className="badge" style={{
+                            background: 'rgba(31, 111, 139, 0.08)',
+                            color: 'var(--color-deep-teal)',
+                            borderColor: 'rgba(31, 111, 139, 0.15)',
+                            padding: '0.5rem 1rem',
+                            fontSize: '0.9rem',
+                            marginBottom: '1rem',
+                            display: 'inline-block'
+                        }}>
                             Our Lifecycle
                         </span>
                         <h2 style={{ fontWeight: 300, marginTop: '1.5rem' }}>How systems actually come to life<span className="highlight-dot">.</span></h2>

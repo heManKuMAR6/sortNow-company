@@ -21,13 +21,13 @@ const Hero = () => {
                             style={{
                                 color: 'var(--color-warm-coral)',
                                 textTransform: 'uppercase',
-                                fontSize: '1.1rem',
-                                fontWeight: 300,
-                                letterSpacing: '0.3em',
+                                fontSize: '1.4rem',
+                                fontWeight: 500,
+                                letterSpacing: '0.2em',
                                 display: 'inline-block'
                             }}
                         >
-                            Are you sorted?
+                            Are you SORTED <span className="highlight-dot">?</span>
                         </motion.span>
                     </div>
 

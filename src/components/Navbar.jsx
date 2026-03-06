@@ -40,13 +40,16 @@ const Navbar = () => {
 
     const handleNavClick = (e, id) => {
         setMobileMenuOpen(false);
-        if (location.pathname !== '/') return;
+        if (location.pathname !== '/') {
+            // Let the standard Link handle the route change
+            return;
+        }
 
         e.preventDefault();
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
-            window.history.pushState(null, '', `#${id}`);
+            window.history.pushState(null, '', `/#${id}`);
         }
     };
 
@@ -77,10 +80,10 @@ const Navbar = () => {
 
                 <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2xl)' }}>
                     <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
-                        <li><a href={isHome ? "#trust" : "/#trust"} className={`nav-link ${activeSection === 'trust' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'trust')}>About</a></li>
-                        <li><a href={isHome ? "#problem" : "/#problem"} className={`nav-link ${activeSection === 'problem' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'problem')}>How We Work</a></li>
-                        <li><a href={isHome ? "#solution" : "/#solution"} className={`nav-link ${activeSection === 'solution' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'solution')}>Services</a></li>
-                        <li><a href={isHome ? "#story" : "/#story"} className={`nav-link ${activeSection === 'story' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'story')}>Team</a></li>
+                        <li><Link to="/#trust" className={`nav-link ${activeSection === 'trust' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'trust')}>About</Link></li>
+                        <li><Link to="/#problem" className={`nav-link ${activeSection === 'problem' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'problem')}>How We Work</Link></li>
+                        <li><Link to="/#solution" className={`nav-link ${activeSection === 'solution' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'solution')}>Services</Link></li>
+                        <li><Link to="/#story" className={`nav-link ${activeSection === 'story' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'story')}>Team</Link></li>
                     </ul>
 
                     <MotionLink

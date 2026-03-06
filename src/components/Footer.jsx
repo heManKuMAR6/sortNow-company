@@ -29,9 +29,9 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4 style={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 'var(--spacing-lg)' }}>Navigation</h4>
                         <ul className="footer-links" style={{ listStyle: 'none', padding: 0 }}>
-                            <li className="mb-sm"><a href="#trust" className="nav-link-footer">About</a></li>
-                            <li className="mb-sm"><a href="#problem" className="nav-link-footer">How We Work</a></li>
-                            <li className="mb-sm"><a href="#solution" className="nav-link-footer">Services</a></li>
+                            <li className="mb-sm"><Link to="/#trust" className="nav-link-footer">About</Link></li>
+                            <li className="mb-sm"><Link to="/#problem" className="nav-link-footer">How We Work</Link></li>
+                            <li className="mb-sm"><Link to="/#solution" className="nav-link-footer">Services</Link></li>
                             <li className="mb-sm"><Link to="/contact" className="nav-link-footer">Contact</Link></li>
                         </ul>
                     </div>
@@ -41,8 +41,9 @@ const Footer = () => {
                         <h4 style={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 'var(--spacing-lg)' }}>Connect</h4>
                         <ul className="footer-links" style={{ listStyle: 'none', padding: 0 }}>
                             <li className="mb-sm"><a href="mailto:hello@sortnow.com" className="nav-link-footer">hello@sortnow.com</a></li>
-                            <li className="mb-sm"><a href="#" className="nav-link-footer">LinkedIn</a></li>
-                            <li className="mb-sm"><a href="#" className="nav-link-footer">Twitter / X</a></li>
+                            <li className="mb-sm"><a href="mailto:hello@sortnow.com" className="nav-link-footer">hello@sortnow.com</a></li>
+                            <li className="mb-sm"><a href="https://linkedin.com/company/sortnow" target="_blank" rel="noreferrer" className="nav-link-footer">LinkedIn</a></li>
+                            <li className="mb-sm"><a href="https://twitter.com/sortnow" target="_blank" rel="noreferrer" className="nav-link-footer">Twitter / X</a></li>
                         </ul>
                     </div>
                 </div>
@@ -60,8 +61,7 @@ const Footer = () => {
                         © {currentYear} sortNow & Company. All rights reserved.
                     </p>
                     <div style={{ display: 'flex', gap: '2rem' }}>
-                        <a href="#" className="nav-link-footer" style={{ fontSize: '0.85rem' }}>Privacy Policy</a>
-                        <a href="#" className="nav-link-footer" style={{ fontSize: '0.85rem' }}>Terms of Service</a>
+                        {/* Legal links omitted until pages are created */}
                     </div>
                 </div>
             </div>

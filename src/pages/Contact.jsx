@@ -106,12 +106,12 @@ const Contact = () => {
                                                     <label htmlFor="interest" className="form-label">What are you interested in?</label>
                                                     <select id="interest" name="interest" className="form-select">
                                                         <option value="">Select a service...</option>
-                                                        <option value="data-engineering">Data Engineering & Warehousing</option>
-                                                        <option value="ml-production">ML Models to Production</option>
-                                                        <option value="mlops">MLOps & CI/CD for ML</option>
-                                                        <option value="cloud-architecture">Cloud Architecture & Migration</option>
-                                                        <option value="technical-partnership">AI/Data Technical Partnership</option>
-                                                        <option value="resource-augmentation">Resource Augmentation</option>
+                                                        <option value="data-engineering">Modern Data Warehousing</option>
+                                                        <option value="ai-voice">AI Voice Assistants</option>
+                                                        <option value="ml-production">Production ML Systems</option>
+                                                        <option value="mlops">MLOps & Automation</option>
+                                                        <option value="cloud-infrastructure">Cloud Infrastructure</option>
+                                                        <option value="technical-partnership">Technical Partnership</option>
                                                         <option value="not-sure">Not sure yet / Multiple areas</option>
                                                     </select>
                                                 </div>
