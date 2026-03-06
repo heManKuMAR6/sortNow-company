@@ -120,16 +120,7 @@ const Trust = () => {
                     >
                         No buzzwords. No false promises. Just real work<span className="highlight-dot">.</span>
                     </motion.h2>
-                    <motion.p
-                        className="mb-lg"
-                        style={{ maxWidth: 800, margin: '0 auto', color: 'var(--text-secondary)', fontSize: '1.25rem', fontWeight: 300 }}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                        We don’t sell promises. We build systems that work and partnerships that last.
-                    </motion.p>
+
                 </div>
 
                 <div className="grid grid-3" style={{ gap: 'var(--spacing-xl)' }}>

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const WhySortNow = () => {
     return (
-        <section className="section-visual" id="why" style={{ background: 'white', color: 'var(--text-primary)', padding: 'var(--spacing-5xl) 0', overflow: 'hidden' }}>
+        <section className="section-visual" id="why" style={{ background: 'transparent', color: 'var(--text-primary)', padding: 'var(--spacing-5xl) 0', overflow: 'hidden' }}>
             <div className="container-narrow text-center">
 
                 {/* Metaphor Animation: The Balance Scale */}
@@ -73,16 +73,7 @@ const WhySortNow = () => {
                     </p>
                 </motion.div>
 
-                <motion.div
-                    className="mt-3xl"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                >
-                    <h3 className="mb-md" style={{ color: 'var(--color-deep-teal)', fontWeight: 400 }}>No drama. No fluff. No unnecessary rebuilds.</h3>
-                    <p style={{ color: 'var(--text-secondary)', fontWeight: 300 }}>Even if it means less profit for us, we’ll make sure you’re sorted.</p>
-                </motion.div>
+
             </div>
         </section>
     );

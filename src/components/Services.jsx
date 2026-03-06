@@ -28,6 +28,19 @@ const services = [
         )
     },
     {
+        title: "AI Voice Assistants",
+        desc: "24/7 AI-driven customer service for local businesses. Powered by ElevenLabs/Cartesia for automated end-to-end workflows.",
+        color: "#8E44AD", // Purple
+        link: "/services/ai-customer-service",
+        icon: (
+            <svg viewBox="0 0 60 60" width="40" height="40">
+                <motion.path d="M20 25 C 20 15, 40 15, 40 25 V 35 C 40 45, 20 45, 20 35 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                <motion.path d="M15 30 A 15 15 0 0 0 45 30" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <motion.path d="M30 45 V 55 M 25 55 H 35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+        )
+    },
+    {
         title: "Production ML Systems",
         desc: "Turning Promising models into robust APIs. We handle feature stores, containerization, and sub-100ms latency serving.",
         color: "var(--color-soft-mint)",
@@ -82,19 +95,6 @@ const services = [
                 <motion.circle cx="40" cy="25" r="8" fill="none" stroke="currentColor" strokeWidth="1.5" />
                 <motion.path d="M10 50 Q 20 40 30 50 Q 40 40 50 50" fill="none" stroke="currentColor" strokeWidth="1.5" />
                 <motion.path d="M30 25 V 35" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
-            </svg>
-        )
-    },
-    {
-        title: "AI Voice Assistants",
-        desc: "24/7 AI-driven customer service for local businesses. Powered by ElevenLabs/Cartesia for automated end-to-end workflows.",
-        color: "#8E44AD", // Purple
-        link: "/services/ai-customer-service",
-        icon: (
-            <svg viewBox="0 0 60 60" width="40" height="40">
-                <motion.path d="M20 25 C 20 15, 40 15, 40 25 V 35 C 40 45, 20 45, 20 35 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M15 30 A 15 15 0 0 0 45 30" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                <motion.path d="M30 45 V 55 M 25 55 H 35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
         )
     }
