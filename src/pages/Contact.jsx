@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ParticleBackground from '../components/ParticleBackground';
 
 const fadeIn = {
     initial: { opacity: 0, y: 30 },
@@ -17,8 +18,9 @@ const Contact = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="hero" style={{ minHeight: '60vh' }}>
-                <div className="container">
+            <section className="hero" style={{ minHeight: '60vh', position: 'relative', overflow: 'hidden' }}>
+                <ParticleBackground />
+                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                     <div className="hero-content">
                         <motion.h1
                             style={{ marginBottom: '1rem' }}

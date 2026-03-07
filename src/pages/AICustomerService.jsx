@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
+import ParticleBackground from '../components/ParticleBackground';
 
 const AICustomerService = () => {
     return (
@@ -17,6 +18,7 @@ const AICustomerService = () => {
                 position: 'relative',
                 overflow: 'hidden'
             }}>
+                <ParticleBackground />
                 <div className="container-narrow text-center" style={{ position: 'relative', zIndex: 2 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
