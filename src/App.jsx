@@ -9,6 +9,7 @@ import ProductionMLSystems from './pages/ProductionMLSystems';
 import MLOpsAutomation from './pages/MLOpsAutomation';
 import CloudInfrastructure from './pages/CloudInfrastructure';
 import TechnicalPartnership from './pages/TechnicalPartnership';
+import NotFound from './pages/NotFound';
 import './index.css';
 
 // Scroll to top on route change
@@ -70,6 +71,11 @@ function AnimatedRoutes() {
         <Route path="/services/technical-partnership" element={
           <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
             <TechnicalPartnership />
+          </motion.div>
+        } />
+        <Route path="*" element={
+          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+            <NotFound />
           </motion.div>
         } />
       </Routes>

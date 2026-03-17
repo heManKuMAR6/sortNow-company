@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ParticleBackground from '../components/ParticleBackground';
@@ -13,6 +14,7 @@ const fadeIn = {
 
 const Contact = () => {
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
     return (
         <div className="contact-page">
             <Navbar />
@@ -96,8 +98,18 @@ const Contact = () => {
                                             <h3 className="mb-lg">Send Us a Message</h3>
                                             <form id="contact-form" onSubmit={(e) => {
                                                 e.preventDefault();
-                                                setSubmitted(true);
-                                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                setLoading(true);
+                                                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_PUBLIC_KEY')
+                                                    .then(() => {
+                                                        setLoading(false);
+                                                        setSubmitted(true);
+                                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                    })
+                                                    .catch((err) => {
+                                                        console.error('EmailJS Error:', err);
+                                                        setLoading(false);
+                                                        alert('Something went wrong. Please email us directly at hello@sortnow.co');
+                                                    });
                                             }}>
                                                 <FormField label="Full Name" id="name" type="text" placeholder="John Smith" required />
                                                 <FormField label="Email Address" id="email" type="email" placeholder="john@company.com" required />
@@ -141,8 +153,9 @@ const Contact = () => {
                                                     style={{ width: '100%' }}
                                                     whileHover={{ scale: 1.02 }}
                                                     whileTap={{ scale: 0.98 }}
+                                                    disabled={loading}
                                                 >
-                                                    Send Message
+                                                    {loading ? "Sending..." : "Send Message"}
                                                 </motion.button>
 
                                                 <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--text-muted)', textAlign: 'center' }}>

@@ -40,8 +40,8 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4 style={{ fontWeight: 600, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 'var(--spacing-lg)' }}>Connect</h4>
                         <ul className="footer-links" style={{ listStyle: 'none', padding: 0 }}>
-                            <li className="mb-sm"><a href="mailto:hello@sortnow.com" className="nav-link-footer">hello@sortnow.com</a></li>
-                            <li className="mb-sm"><a href="mailto:hello@sortnow.com" className="nav-link-footer">hello@sortnow.com</a></li>
+                            <li className="mb-sm"><a href="mailto:hello@sortnow.co" className="nav-link-footer">hello@sortnow.co</a></li>
+                            <li className="mb-sm"><a href="https://linkedin.com/company/sortnow" target="_blank" rel="noreferrer" className="nav-link-footer">LinkedIn</a></li>
                             <li className="mb-sm"><a href="https://linkedin.com/company/sortnow" target="_blank" rel="noreferrer" className="nav-link-footer">LinkedIn</a></li>
                             <li className="mb-sm"><a href="https://twitter.com/sortnow" target="_blank" rel="noreferrer" className="nav-link-footer">Twitter / X</a></li>
                         </ul>
