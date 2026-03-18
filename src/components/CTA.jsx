@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 /**
  * Refined "CTA" section (CTA.jsx)
@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 
 const CTA = () => {
     const MotionLink = motion(Link);
+    const location = useLocation();
+    const navigate = useNavigate();
     return (
         <section style={{ paddingTop: '80px', paddingBottom: '160px', background: 'white', position: 'relative' }}>
 
@@ -105,13 +107,18 @@ const CTA = () => {
                                 Sort My Systems →
                             </MotionLink>
                             <motion.a
-                                href="#solution"
+                                href="/"
                                 className="btn btn-outline btn-lg"
                                 style={{ borderColor: 'rgba(31, 111, 139, 0.3)', color: 'var(--text-primary)', minWidth: '220px' }}
                                 whileHover={{ background: 'rgba(31, 111, 139, 0.05)' }}
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.getElementById('solution').scrollIntoView({ behavior: 'smooth' });
+                                    if (location.pathname === '/' || location.pathname === '') {
+                                        const el = document.getElementById('solution');
+                                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                    } else {
+                                        navigate('/#solution');
+                                    }
                                 }}
                             >
                                 View Our Services
