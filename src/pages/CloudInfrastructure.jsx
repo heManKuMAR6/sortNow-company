@@ -110,6 +110,29 @@ const CloudInfrastructure = () => {
                                     </ul>
                                 </div>
                             </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                <h2 style={{ color: 'var(--text-primary)', fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: 300 }}>The Impact</h2>
+                                <div className="grid grid-3" style={{ gap: '1.5rem', marginBottom: '3rem', marginTop: '2rem' }}>
+                                    <div style={{ padding: '1.5rem 0', borderTop: '2px solid var(--color-warm-coral)' }}>
+                                        <div style={{ fontSize: '3rem', fontWeight: 300, color: 'var(--color-warm-coral)', lineHeight: 1 }}>30-50%</div>
+                                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Cost Reduction</div>
+                                    </div>
+                                    <div style={{ padding: '1.5rem 0', borderTop: '2px solid var(--color-warm-coral)' }}>
+                                        <div style={{ fontSize: '3rem', fontWeight: 300, color: 'var(--color-warm-coral)', lineHeight: 1 }}>99.9%</div>
+                                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Uptime SLA</div>
+                                    </div>
+                                    <div style={{ padding: '1.5rem 0', borderTop: '2px solid var(--color-warm-coral)' }}>
+                                        <div style={{ fontSize: '3rem', fontWeight: 300, color: 'var(--color-warm-coral)', lineHeight: 1 }}>80%</div>
+                                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Cheaper Compute via Spot</div>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

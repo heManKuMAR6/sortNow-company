@@ -110,6 +110,29 @@ const MLOpsAutomation = () => {
                                     </ul>
                                 </div>
                             </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                <h2 style={{ color: 'var(--text-primary)', fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: 300 }}>The Impact</h2>
+                                <div className="grid grid-3" style={{ gap: '1.5rem', marginBottom: '3rem', marginTop: '2rem' }}>
+                                    <div style={{ padding: '1.5rem 0', borderTop: '2px solid #E5B830' }}>
+                                        <div style={{ fontSize: '3rem', fontWeight: 300, color: '#E5B830', lineHeight: 1 }}>0</div>
+                                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Manual Retraining Steps</div>
+                                    </div>
+                                    <div style={{ padding: '1.5rem 0', borderTop: '2px solid #E5B830' }}>
+                                        <div style={{ fontSize: '3rem', fontWeight: 300, color: '#E5B830', lineHeight: 1 }}>100%</div>
+                                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Experiment Reproducibility</div>
+                                    </div>
+                                    <div style={{ padding: '1.5rem 0', borderTop: '2px solid #E5B830' }}>
+                                        <div style={{ fontSize: '3rem', fontWeight: 300, color: '#E5B830', lineHeight: 1 }}>&lt;1hr</div>
+                                        <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Drift Detection Time</div>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
