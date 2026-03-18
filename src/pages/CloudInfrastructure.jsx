@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -8,6 +9,10 @@ import ParticleBackground from '../components/ParticleBackground';
 const CloudInfrastructure = () => {
     return (
         <div className="case-study-page">
+            <Helmet>
+                <title>Cloud Infrastructure | sortNow & Company</title>
+                <meta name="description" content="Terraform, Kubernetes, AWS and GCP architectures. 30–50% cost reduction guaranteed." />
+            </Helmet>
             <Navbar />
 
             <section className="case-hero" style={{

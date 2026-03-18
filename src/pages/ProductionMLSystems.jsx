@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -8,6 +9,10 @@ import ParticleBackground from '../components/ParticleBackground';
 const ProductionMLSystems = () => {
     return (
         <div className="case-study-page">
+            <Helmet>
+                <title>Production ML Systems | sortNow & Company</title>
+                <meta name="description" content="We take ML models from notebooks to production APIs with sub-50ms latency." />
+            </Helmet>
             <Navbar />
 
             <section className="case-hero" style={{

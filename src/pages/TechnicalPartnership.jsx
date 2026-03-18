@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -8,6 +9,10 @@ import ParticleBackground from '../components/ParticleBackground';
 const TechnicalPartnership = () => {
     return (
         <div className="case-study-page">
+            <Helmet>
+                <title>Technical Partnership | sortNow & Company</title>
+                <meta name="description" content="Fractional CTO and senior engineering leadership without the full-time cost." />
+            </Helmet>
             <Navbar />
 
             <section className="case-hero" style={{

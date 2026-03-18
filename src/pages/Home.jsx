@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import ParticleBackground from '../components/ParticleBackground';
 import Trust from '../components/Trust';
@@ -12,6 +13,10 @@ import Footer from '../components/Footer';
 const Home = () => {
     return (
         <div className="home-page">
+            <Helmet>
+                <title>sortNow & Company | Untangling Technical Chaos</title>
+                <meta name="description" content="Premium AI, Data, and Cloud Engineering consulting. We build production-ready systems that work." />
+            </Helmet>
             <Navbar />
 
             {/* Wrapper for shared Particle Background */}

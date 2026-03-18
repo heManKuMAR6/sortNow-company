@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -9,6 +10,10 @@ import ParticleBackground from '../components/ParticleBackground';
 const ModernDataWarehousing = () => {
     return (
         <div className="case-study-page">
+            <Helmet>
+                <title>Modern Data Warehousing | sortNow & Company</title>
+                <meta name="description" content="Snowflake, BigQuery, and dbt architectures that give you a single source of truth." />
+            </Helmet>
             <Navbar />
 
             {/* Hero Section */}

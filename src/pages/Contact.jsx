@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ParticleBackground from '../components/ParticleBackground';
@@ -17,6 +18,10 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     return (
         <div className="contact-page">
+            <Helmet>
+                <title>Contact Us | sortNow & Company</title>
+                <meta name="description" content="Book a strategy call with sortNow & Company. 30-minute intro call, no sales pressure." />
+            </Helmet>
             <Navbar />
 
             {/* Hero Section */}

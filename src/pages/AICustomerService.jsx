@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -8,6 +9,10 @@ import ParticleBackground from '../components/ParticleBackground';
 const AICustomerService = () => {
     return (
         <div className="case-study-page">
+            <Helmet>
+                <title>AI Voice Assistants | sortNow & Company</title>
+                <meta name="description" content="24/7 AI voice automation for restaurants, motels, and clinics. Zero missed calls." />
+            </Helmet>
             <Navbar />
 
             {/* Hero Section */}
