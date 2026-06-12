@@ -28,8 +28,8 @@ const Home = () => {
                 </div>
             </div>
             <Trust />
-            <Process />
             <Services />
+            <Process />
             <Story />
             <CTA />
             <Footer />

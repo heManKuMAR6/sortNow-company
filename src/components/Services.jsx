@@ -9,20 +9,27 @@ import { Link } from 'react-router-dom';
 
 const services = [
     {
-        title: "Modern Data Warehousing",
-        desc: "Unified Snowflake, BigQuery, or Redshift architectures with consolidated ELT pipelines for a single source of truth.",
+        title: "sortNow Leads",
+        desc: "Automated lead scoring and real-time buying signals. We find the signal in the noise for teams that demand absolute pipeline clarity.",
         color: "var(--color-deep-teal)",
-        link: "/services/modern-data-warehousing",
+        link: "https://sortnowleads.com/",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
-                <motion.path d="M10 20 L 30 10 L 50 20 L 30 30 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M10 30 L 30 20 L 50 30 L 30 40 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M10 40 L 30 30 L 50 40 L 30 50 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M10 20 V 40" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M30 30 V 50" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M50 20 V 40" stroke="currentColor" strokeWidth="1.5" />
-                <motion.circle cx="30" cy="20" r="2" fill="currentColor">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+                {/* Concentric radar circles */}
+                <motion.circle cx="30" cy="30" r="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
+                <motion.circle cx="30" cy="30" r="10" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                <motion.circle cx="30" cy="30" r="3" fill="currentColor" />
+                
+                {/* Diagonal sensor lines */}
+                <motion.path d="M15 15 L 22 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <motion.path d="M45 15 L 38 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <motion.path d="M15 45 L 22 38" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <motion.path d="M45 45 L 38 38" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+
+                {/* Animated radiating signal wave */}
+                <motion.circle cx="30" cy="30" r="8" fill="none" stroke="currentColor" strokeWidth="1">
+                    <animate attributeName="r" values="8;24" dur="2.5s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1;0" dur="2.5s" repeatCount="indefinite" />
                 </motion.circle>
             </svg>
         )
@@ -146,14 +153,25 @@ const Services = () => {
                             </p>
 
                             {service.link ? (
-                                <Link to={service.link} style={{ textDecoration: 'none', marginTop: 'auto' }}>
-                                    <motion.div
-                                        style={{ fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
-                                        whileHover={{ x: 5 }}
-                                    >
-                                        LEARN MORE →
-                                    </motion.div>
-                                </Link>
+                                service.link.startsWith('http') ? (
+                                    <a href={service.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+                                        <motion.div
+                                            style={{ fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
+                                            whileHover={{ x: 5 }}
+                                        >
+                                            LEARN MORE →
+                                        </motion.div>
+                                    </a>
+                                ) : (
+                                    <Link to={service.link} style={{ textDecoration: 'none', marginTop: 'auto' }}>
+                                        <motion.div
+                                            style={{ fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
+                                            whileHover={{ x: 5 }}
+                                        >
+                                            LEARN MORE →
+                                        </motion.div>
+                                    </Link>
+                                )
                             ) : (
                                 <motion.div
                                     style={{ marginTop: 'auto', fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
