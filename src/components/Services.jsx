@@ -14,6 +14,7 @@ const services = [
         desc: "Automated lead scoring and real-time buying signals. We find the signal in the noise for teams that demand absolute pipeline clarity.",
         color: "var(--color-deep-teal)",
         link: "https://sortnowleads.com/",
+        cta: "OPEN SORTNOW LEADS ↗",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
                 {/* Concentric radar circles */}
@@ -40,6 +41,7 @@ const services = [
         desc: "24/7 AI-driven customer service for local businesses. Powered by ElevenLabs/Cartesia for automated end-to-end workflows.",
         color: "#8E44AD", // Purple
         link: "/services/ai-customer-service",
+        cta: "HEAR THE ASSISTANT →",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
                 <motion.path d="M20 25 C 20 15, 40 15, 40 25 V 35 C 40 45, 20 45, 20 35 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -50,7 +52,7 @@ const services = [
     },
     {
         title: "sortNow Learn",
-        desc: "Short video lessons, plain-English notes, and a coach you can ask while you watch. Beginner and Manager tracks to make AI stick, free to start.",
+        desc: "Short AI lessons, daily challenges, and a profile that tracks your streak and portfolio. Learn in small steps, free to start.",
         color: "#2C93A6", // deeper mint so the link text is readable on white
         link: LEARN_URL,
         cta: "OPEN SORTNOW LEARN ↗",
@@ -71,8 +73,9 @@ const services = [
     {
         title: "MLOps & Automation",
         desc: "Standardizing the ML lifecycle with MLflow and CI/CD. One-click deployments and automated drift detection.",
-        color: "var(--color-sunny-yellow)",
+        color: "#D4A017", // deeper gold so the link text is readable on white
         link: "/services/mlops-automation",
+        cta: "EXPLORE MLOPS →",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
                 <motion.path d="M10 30 A 20 20 0 1 1 50 30" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="5 5" />
@@ -87,6 +90,7 @@ const services = [
         desc: "Secure, auto-scaling architectures on AWS/GCP/Azure. Cost optimization strategies that reduce spend by 30-50%.",
         color: "var(--color-warm-coral)",
         link: "/services/cloud-infrastructure",
+        cta: "CUT YOUR CLOUD BILL →",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
                 <motion.path d="M15 40 A 10 10 0 0 1 25 30 A 12 12 0 0 1 45 35 A 8 8 0 0 1 55 45 H 15 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -101,6 +105,7 @@ const services = [
         desc: "Fractional CTO and senior engineering leadership. Strategic planning and team mentoring without the full-time cost.",
         color: "#1F6F8B", // Deep Teal
         link: "/services/technical-partnership",
+        cta: "MEET YOUR CTO →",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
                 <motion.circle cx="20" cy="25" r="8" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -173,7 +178,7 @@ const Services = () => {
                                             style={{ fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
                                             whileHover={{ x: 5 }}
                                         >
-                                            LEARN MORE →
+                                            {service.cta || 'LEARN MORE →'}
                                         </motion.div>
                                     </Link>
                                 )
@@ -182,7 +187,7 @@ const Services = () => {
                                     style={{ marginTop: 'auto', fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
                                     whileHover={{ x: 5 }}
                                 >
-                                    LEARN MORE →
+                                    {service.cta || 'LEARN MORE →'}
                                 </motion.div>
                             )}
                         </motion.div>
