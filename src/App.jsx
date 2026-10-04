@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import ModernDataWarehousing from './pages/ModernDataWarehousing';
 import AICustomerService from './pages/AICustomerService';
-import ProductionMLSystems from './pages/ProductionMLSystems';
 import MLOpsAutomation from './pages/MLOpsAutomation';
 import CloudInfrastructure from './pages/CloudInfrastructure';
 import TechnicalPartnership from './pages/TechnicalPartnership';
@@ -51,11 +50,6 @@ function AnimatedRoutes() {
         <Route path="/services/ai-customer-service" element={
           <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
             <AICustomerService />
-          </motion.div>
-        } />
-        <Route path="/services/production-ml-systems" element={
-          <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
-            <ProductionMLSystems />
           </motion.div>
         } />
         <Route path="/services/mlops-automation" element={
