@@ -52,7 +52,7 @@ const services = [
     },
     {
         title: "sortNow Learn",
-        desc: "Short video lessons, plain-English notes, and a coach you can ask while you watch. Beginner and Manager tracks to make AI stick, free to start.",
+        desc: "Short AI lessons, daily challenges, and a profile that tracks your streak and portfolio. Learn in small steps, free to start.",
         color: "#2C93A6", // deeper mint so the link text is readable on white
         link: LEARN_URL,
         cta: "OPEN SORTNOW LEARN ↗",
