@@ -1,4 +1,11 @@
 {
+    "redirects": [
+        {
+            "source": "/services/production-ml-systems",
+            "destination": "https://learn.sortnow.co",
+            "permanent": false
+        }
+    ],
     "rewrites": [
         {
             "source": "/(.*)",

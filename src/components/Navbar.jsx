@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LEARN_URL } from '../config';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -84,6 +85,7 @@ const Navbar = () => {
                         <li><Link to="/#solution" className={`nav-link ${activeSection === 'solution' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'solution')}>Services</Link></li>
                         <li><Link to="/#problem" className={`nav-link ${activeSection === 'problem' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'problem')}>How We Work</Link></li>
                         <li><Link to="/#story" className={`nav-link ${activeSection === 'story' ? 'active' : ''}`} onClick={(e) => handleNavClick(e, 'story')}>Team</Link></li>
+                        <li><a href={LEARN_URL} className="nav-link" target="_blank" rel="noopener noreferrer">Learn ↗</a></li>
                     </ul>
 
                     <MotionLink

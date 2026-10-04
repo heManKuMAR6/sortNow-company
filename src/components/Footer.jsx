@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { LEARN_URL } from '../config';
 
 /**
  * Refined "Footer" section (Footer.jsx)
@@ -32,6 +33,7 @@ const Footer = () => {
                             <li className="mb-sm"><Link to="/#trust" className="nav-link-footer">About</Link></li>
                             <li className="mb-sm"><Link to="/#problem" className="nav-link-footer">How We Work</Link></li>
                             <li className="mb-sm"><Link to="/#solution" className="nav-link-footer">Services</Link></li>
+                            <li className="mb-sm"><a href={LEARN_URL} target="_blank" rel="noopener noreferrer" className="nav-link-footer">sortNow Learn ↗</a></li>
                             <li className="mb-sm"><Link to="/contact" className="nav-link-footer">Contact</Link></li>
                         </ul>
                     </div>

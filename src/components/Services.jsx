@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { LEARN_URL } from '../config';
 
 /**
  * Refined "Services" section (Services.jsx)
@@ -48,18 +49,22 @@ const services = [
         )
     },
     {
-        title: "Production ML Systems",
-        desc: "Turning Promising models into robust APIs. We handle feature stores, containerization, and sub-100ms latency serving.",
-        color: "var(--color-soft-mint)",
-        link: "/services/production-ml-systems",
+        title: "sortNow Learn",
+        desc: "Short video lessons, plain-English notes, and a coach you can ask while you watch. Beginner and Manager tracks to make AI stick, free to start.",
+        color: "#2C93A6", // deeper mint so the link text is readable on white
+        link: LEARN_URL,
+        cta: "OPEN SORTNOW LEARN ↗",
         icon: (
             <svg viewBox="0 0 60 60" width="40" height="40">
-                <motion.rect x="15" y="15" width="30" height="30" rx="4" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <motion.circle cx="30" cy="30" r="8" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                <motion.path d="M30 15 V 45 M 15 30 H 45" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
-                <motion.rect x="27" y="27" width="6" height="6" fill="currentColor">
-                    <animateTransform attributeName="transform" type="rotate" from="0 30 30" to="360 30 30" dur="4s" repeatCount="indefinite" />
-                </motion.rect>
+                {/* Open book */}
+                <motion.path d="M30 20 C 24 15, 14 15, 9 18 V 46 C 14 43, 24 43, 30 48 C 36 43, 46 43, 51 46 V 18 C 46 15, 36 15, 30 20 Z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                <motion.path d="M30 20 V 48" stroke="currentColor" strokeWidth="1.5" />
+                <motion.path d="M14 25 C 18 24, 23 24, 26 26 M14 32 C 18 31, 23 31, 26 33" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+                {/* Spark that rises from the pages */}
+                <motion.circle cx="30" cy="12" r="2.5" fill="currentColor">
+                    <animate attributeName="cy" values="16;6;16" dur="2.4s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite" />
+                </motion.circle>
             </svg>
         )
     },
@@ -159,7 +164,7 @@ const Services = () => {
                                             style={{ fontSize: '0.85rem', color: service.color, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}
                                             whileHover={{ x: 5 }}
                                         >
-                                            LEARN MORE →
+                                            {service.cta || 'LEARN MORE →'}
                                         </motion.div>
                                     </a>
                                 ) : (
