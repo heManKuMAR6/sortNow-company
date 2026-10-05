@@ -2,7 +2,7 @@
     "redirects": [
         {
             "source": "/services/production-ml-systems",
-            "destination": "https://sortnow-learn.vercel.app",
+            "destination": "https://learn.sortnow.co",
             "permanent": false
         }
     ],
